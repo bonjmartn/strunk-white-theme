@@ -1,0 +1,13 @@
+Version 1.1
+4/6/16
+---------------------------------------
+
+- Added better support for using a front page vs a blog index page for the homepage
+- Removed support for post formats because they weren't implemented correctly
+
+Version 1.2
+6/1/16
+---------------------------------------
+
+- Added an About Box widget for your sidebar
+- Added a subtle gray box around sidebar widgets so that they all make more sense
