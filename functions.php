@@ -4,7 +4,7 @@
 
 function strunk_theme_styles() {
 
-	wp_enqueue_style( 'font_awesome', get_template_directory_uri() . '/css/font-awesome-4.5.0/css/font-awesome.min.css' );
+	wp_enqueue_style( 'font_awesome', get_template_directory_uri() . '/font-awesome-4.6.3/css/font-awesome.min.css' );
 	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
 }
 
