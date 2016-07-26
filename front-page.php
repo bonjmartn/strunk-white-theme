@@ -39,7 +39,9 @@
 
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
-            <p class="home-byline">Posted on <?php echo the_time('l, F jS, Y');?> in <?php the_category( ', ' ); ?> with <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></p> 
+            <p class="home-byline">Posted on <?php echo the_time('l, F jS, Y');?> in 
+              <?php the_category( ', ' ); ?> with 
+              <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></p> 
 
             <p><?php the_excerpt(); ?></p>
 
@@ -47,7 +49,7 @@
 
           <div class="col span_6_of_12 home-blog-image">
 
-            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
 
           </div>
 

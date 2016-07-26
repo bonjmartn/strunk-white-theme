@@ -46,8 +46,7 @@ strunk_home_widgets( 'Homepage Call to Action Bar', 'front-bar', 'Call to action
 
 // Create Widget areas for Pages and Blog Posts
 
-strunk_create_widget( 'Page Sidebar', 'page', 'Displays on the side of pages' );
-strunk_create_widget( 'Blog Sidebar', 'blog', 'Displays on the right of blog posts' );
+strunk_create_widget( 'Sidebar', 'blog', 'Displays on the right of blog posts and pages.' );
 
 // Create Widget areas for Footer
 

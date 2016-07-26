@@ -23,52 +23,57 @@ function strunk_theme_js() {
 
 add_action( 'wp_enqueue_scripts', 'strunk_theme_js');
 
+
+// Add WP Basic Features Support
+
+function strunk_setup() {
+
+	// Add Support for Feed Links
+	add_theme_support( 'automatic-feed-links' );
+
+	// Add Menu Support
+	add_theme_support ( 'menus' );
+
+	// Add Thumbnails Support
+	add_theme_support( 'post-thumbnails' );
+
+	// Add Support for Flexible Title Tag
+	add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'strunk_setup' );
+
+
 // Check for Front Page being used
-function themeslug_filter_front_page_template( $template ) {
+
+function strunk_filter_front_page_template( $template ) {
     return is_home() ? '' : $template;
 }
-add_filter( 'frontpage_template', 'themeslug_filter_front_page_template' );
-
-// Add Support for Flexible Title Tag
-
-add_theme_support( 'title-tag' );
+add_filter( 'frontpage_template', 'strunk_filter_front_page_template' );
 
 // Add Support for WooCommerce
 
-add_action( 'after_setup_theme', 'woocommerce_support' );
-function woocommerce_support() {
+add_action( 'after_setup_theme', 'strunk_woocommerce_support' );
+function strunk_woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 
 // Add Support for Google Fonts
 
-function google_fonts() {
+function strunk_google_fonts() {
   $query_args = array(
     'family' => 'Lora:400,700,400italic,700italic|Droid+Serif:400,400italic,700,700italic|Playfair+Display:400,400italic,700,700italic|Libre+Baskerville:400,400italic,700|Alegreya:400,400italic,700,700italic|Josefin+Slab:400,400italic,700,700italic|Open+Sans:400,700,700italic,400italic|Lato:400,400italic,700,700italic',
     'subset' => 'latin,latin-ext',
   );
   wp_enqueue_style( 'google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
-}
-            
-add_action('wp_enqueue_scripts', 'google_fonts');
-
-// Add Menu Support
-
-add_theme_support ( 'menus' );
-
-// Add Thumbnails Support
-
-add_theme_support( 'post-thumbnails' );
+}         
+add_action('wp_enqueue_scripts', 'strunk_google_fonts');
 
 // Content Width Requirement
 
-if ( ! isset( $content_width ) ) {
-	$content_width = 800;
+function strunk_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'strunk_content_width', 800 );
 }
-
-// Add Support for Feed Links
-
-add_theme_support( 'automatic-feed-links' );
+add_action( 'after_setup_theme', 'strunk_content_width', 0 );
 
 // MENUS!
 
@@ -106,22 +111,15 @@ require_once get_template_directory() . '/inc/wp-customize-image-reloaded.php';
 
 require_once get_template_directory() . '/inc/theme-customizer.php';
 
-
 // Replaces the excerpt "more" text with a link
 
-function new_excerpt_more($more) {
-       global $post;
+function strunk_excerpt_more($more) {
+    global $post;
 	return ' <a class="moretag" href="'. get_permalink($post->ID) . '">Read More</a>';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'strunk_excerpt_more');
 
-
-/**
- * Filter the except length to 75 characters.
- *
- * @param int $length Excerpt length.
- * @return int (Maybe) modified excerpt length.
- */
+// Filter the except length to 75 characters.
 
 function strunk_custom_excerpt_length( $length ) {
     return 75;

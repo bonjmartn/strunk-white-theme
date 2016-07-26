@@ -5,7 +5,7 @@ STRUNK AND WHITE THEME
 Thanks for using the Strunk & White theme. This WordPress theme was designed for writers and readers, but you can use it for any website.
 
 The theme's main informational page is at:
-http://www.zenwebthemes.com/shop-themes/strunk-white/
+https://www.zenwebthemes.com/shop-themes/strunk-white/
 
 ------------------------------
 FREE AND PREMIUM VERSIONS
@@ -39,7 +39,7 @@ DEMONSTRATION SITE
 ------------------------------
 
 If you haven't seen the theme demo, you can take a look here:
-http://www.zenwebthemes.com/strunk-white-demo/
+https://www.zenwebthemes.com/strunk-white-demo/
 
 ------------------------------
 DOCUMENTATION
@@ -70,7 +70,7 @@ blue accent
 HOW TO GET HELP
 ------------------------------
 
-Please go to http://www.zenwebthemes.com/support/ to see all of the support options.
+Please go to https://www.zenwebthemes.com/support/ to see all of the support options.
 
 ------------------------------
 UPDATES AND FREEBIES
@@ -84,4 +84,4 @@ If you sign up for the mailing list, you'll get:
 - Other notices about Zen Web Themes, like new theme releases and discounts
 
 Sign up here:
-http://www.zenwebthemes.com/shop-themes/get-all-free-themes/
+https://www.zenwebthemes.com/shop-themes/get-all-free-themes/

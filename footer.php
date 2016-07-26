@@ -10,7 +10,7 @@
     </div>
 
     <div class="footer-strip">
-      <span id="copyright">&copy; <?php bloginfo('name'); ?> <?php echo date ('Y') ?> &nbsp; &nbsp; &nbsp; Website design by <a href="http://www.zenwebthemes.com/">ZenWebThemes.com</a></span>
+      <span id="copyright">&copy; <?php bloginfo('name'); ?> <?php echo date ('Y') ?> &nbsp; &nbsp; &nbsp; Strunk &amp; White Theme by <a href="https://www.zenwebthemes.com/">ZenWebThemes.com</a></span>
     </div>
 
   </div><!-- end of full container -->

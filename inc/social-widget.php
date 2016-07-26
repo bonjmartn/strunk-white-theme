@@ -89,15 +89,15 @@ class strunk_social_widget extends WP_Widget {
    * @param array $instance Previously saved values from database.
    */
   public function form( $instance ) {
-    $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'Follow Us', 'strunk-and-white-free' );
-    $facebook = ! empty( $instance['facebook'] ) ? $instance['facebook'] : __( 'Facebook URL', 'strunk-and-white-free' );
-    $twitter = ! empty( $instance['twitter'] ) ? $instance['twitter'] : __( 'Twitter URL', 'strunk-and-white-free' );
-    $pinterest = ! empty( $instance['pinterest'] ) ? $instance['pinterest'] : __( 'Pinterest URL', 'strunk-and-white-free' );
-    $instagram = ! empty( $instance['instagram'] ) ? $instance['instagram'] : __( 'Instagram URL', 'strunk-and-white-free' );
-    $googleplus = ! empty( $instance['googleplus'] ) ? $instance['googleplus'] : __( 'Google Plus URL', 'strunk-and-white-free' );
-    $yelp = ! empty( $instance['yelp'] ) ? $instance['yelp'] : __( 'Yelp URL', 'strunk-and-white-free' );
-    $youtube = ! empty( $instance['youtube'] ) ? $instance['youtube'] : __( 'YouTube URL', 'strunk-and-white-free' );
-    $linkedin = ! empty( $instance['linkedin'] ) ? $instance['linkedin'] : __( 'LinkedIn URL', 'strunk-and-white-free' );
+    $title = ! empty( $instance['title'] ) ? $instance['title'] : __( '', 'strunk-and-white-free' );
+    $facebook = ! empty( $instance['facebook'] ) ? $instance['facebook'] : __( '', 'strunk-and-white-free' );
+    $twitter = ! empty( $instance['twitter'] ) ? $instance['twitter'] : __( '', 'strunk-and-white-free' );
+    $pinterest = ! empty( $instance['pinterest'] ) ? $instance['pinterest'] : __( '', 'strunk-and-white-free' );
+    $instagram = ! empty( $instance['instagram'] ) ? $instance['instagram'] : __( '', 'strunk-and-white-free' );
+    $googleplus = ! empty( $instance['googleplus'] ) ? $instance['googleplus'] : __( '', 'strunk-and-white-free' );
+    $yelp = ! empty( $instance['yelp'] ) ? $instance['yelp'] : __( '', 'strunk-and-white-free' );
+    $youtube = ! empty( $instance['youtube'] ) ? $instance['youtube'] : __( '', 'strunk-and-white-free' );
+    $linkedin = ! empty( $instance['linkedin'] ) ? $instance['linkedin'] : __( '', 'strunk-and-white-free' );
     ?>
 
 

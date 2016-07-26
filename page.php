@@ -1,7 +1,3 @@
-<?php
-/* Template Name: Right Sidebar
-*/
-?>
 <?php get_header(); ?>
 
 <div class="white-container">
