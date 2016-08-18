@@ -26,3 +26,9 @@ Version 1.4
 - PHP adjustments in functions.php to better comply with official WordPress guidelines
 - Updated a few translation support bugs
 - Fixed an issue where large featured images would break the layout on the front page
+
+Version 1.5
+8/18/16
+---------------------------------------
+
+- Security update for URLs the user enters for social media profiles and similar fields.
