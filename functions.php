@@ -81,7 +81,7 @@ function strunk_register_theme_menus() {
 
 	register_nav_menus (
 		array (
-			'header-menu' => __( 'Header Menu', 'strunk-and-white-free')
+			'header-menu' => __( 'Header Menu', 'strunk-and-white')
 	));
 }
 

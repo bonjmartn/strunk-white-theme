@@ -1,25 +1,25 @@
 <?php 
 
 // register ctabar widget
-function register_strunk_ctabar_widget() {
-    register_widget( 'strunk_ctabar_widget' );
+function register_ctabar_widget() {
+    register_widget( 'ctabar_widget' );
 }
-add_action( 'widgets_init', 'register_strunk_ctabar_widget' );
+add_action( 'widgets_init', 'register_ctabar_widget' );
 
 
 /**
- * Adds ctabar_widget widget.
+ * Adds ctabar_Widget widget.
  */
-class strunk_ctabar_widget extends WP_Widget {
+class ctabar_Widget extends WP_Widget {
 
   /**
    * Register widget with WordPress.
    */
   function __construct() {
     parent::__construct(
-      'strunk_ctabar_widget', // Base ID
-      __( 'Call to Action Bar', 'strunk-and-white-free' ), // Name
-      array( 'description' => __( 'Drag me to the Footer Call to Action Bar widget area', 'strunk-and-white-free' ), ) // Args
+      'ctabar_widget', // Base ID
+      __( 'Call to Action Bar', 'strunk-and-white' ), // Name
+      array( 'description' => __( 'Drag me to the Footer Call to Action Bar widget area', 'strunk-and-white' ), ) // Args
     );
   }
 
@@ -55,26 +55,26 @@ class strunk_ctabar_widget extends WP_Widget {
    * @param array $instance Previously saved values from database.
    */
   public function form( $instance ) {
-    $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'Your Call to Action', 'strunk-and-white-free' );
-    $text = ! empty( $instance['text'] ) ? $instance['text'] : __( 'Button Text', 'strunk-and-white-free' );
-    $link = ! empty( $instance['link'] ) ? $instance['link'] : __( 'Button Link', 'strunk-and-white-free' );
+    $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'Your Call to Action', 'strunk-and-white' );
+    $text = ! empty( $instance['text'] ) ? $instance['text'] : __( 'Button Text', 'strunk-and-white' );
+    $link = ! empty( $instance['link'] ) ? $instance['link'] : __( 'Button Link', 'strunk-and-white' );
     ?>
 
 
     <p>
-    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'strunk-and-white-free' ); ?></label> 
+    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'strunk-and-white' ); ?></label> 
     <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" 
     value="<?php echo esc_attr( $title ); ?>">
     </p>
 
     <p>
-    <label for="<?php echo $this->get_field_id('text_field'); ?>"><?php _e('Enter the text for the button', 'strunk-and-white-free'); ?></label>
+    <label for="<?php echo $this->get_field_id('text_field'); ?>"><?php _e('Enter the text for the button', 'strunk-and-white'); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id('text_field'); ?>" name="<?php echo $this->get_field_name('text_field'); ?>" type="text" 
     value="<?php echo esc_attr( $text ); ?>" />
     </p>
 
     <p>
-    <label for="<?php echo $this->get_field_id('link_field'); ?>"><?php _e('Enter the URL for the button', 'strunk-and-white-free'); ?></label>
+    <label for="<?php echo $this->get_field_id('link_field'); ?>"><?php _e('Enter the URL for the button', 'strunk-and-white'); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id('link_field'); ?>" name="<?php echo $this->get_field_name('link_field'); ?>" type="text" 
     value="<?php echo esc_attr( $link ); ?>" />
     </p>
@@ -100,4 +100,4 @@ class strunk_ctabar_widget extends WP_Widget {
     return $instance;
   }
 
-} // class ctabar_widget
+} // class ctabar_Widget

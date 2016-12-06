@@ -1,14 +1,14 @@
 /*
-Theme Name: Strunk and White Free
+Theme Name: Strunk and White
 Theme URI: https://www.zenwebthemes.com/shop-themes/strunk-white/
 Author: Bonnie Martin
 Author URI: https://www.zenwebthemes.com
-Description: Strunk & White is named after the authors of The Elements of Style, William Strunk Jr. and E. B. White. This is the free version.
+Description: Strunk & White is named after the authors of The Elements of Style, William Strunk Jr. and E. B. White.
 Version: 1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: two-columns, right-sidebar, custom-background, custom-header, custom-menu, featured-images, footer-widgets, theme-options, blog
-Text Domain: strunk-and-white-free
+Tags: two-columns, left-sidebar, right-sidebar, full-width-template, custom-background, custom-colors, custom-header, custom-menu, featured-images, footer-widgets, theme-options, blog
+Text Domain: strunk-and-white
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -40,7 +40,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 html {
 	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
 	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
-	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-webkit-text-size-adjust: 100%;  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
 body {
@@ -108,10 +108,6 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: "Alegreya", serif;
 }
 
-h1,h3,h4,h5,h6 {
-	color: #000000;
-}
-
 h1 {
 	font-size: 34px;
 }
@@ -135,6 +131,7 @@ h6 {
 
 p {
 	margin-bottom: 1.5em;
+	color: #333333;
 }
 ul, ol {
 	margin: 0 0 1.5em 3em;
@@ -325,7 +322,6 @@ input[type="submit"] {
 	line-height: 1;
 	padding: 1.12em 1.5em 1em;
 	text-transform: uppercase;
-	text-shadow: 0 1px 0 rgba(255,255,255,.8);
 }
 button:hover,
 html input[type="button"]:hover,
@@ -459,25 +455,23 @@ a:active {
 ----------------------------------------------- */
 
 .page-container {
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1000px;
-  background-color: #FFFFFF;
+	padding: 0;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1000px;
+	background-color: #FFFFFF;
 }
 
 .full-container,
 .white-container {
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: #FFFFFF;
+	padding: 0;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFFFFF;
 }
 
 .white-container {
-  min-height: 60vh;
+	min-height: 60vh;
 }
 
 /* =Site Header
@@ -491,14 +485,8 @@ a:active {
 }
 
 .logo {
-	margin: 30px auto 20px;
-}
-
-.logo img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 100%
+	margin: 30px auto 20px auto;
+	text-align: center;
 }
 
 /* =Menu
@@ -657,6 +645,10 @@ a:active {
 	background-color: #f2f2f2;
 }
 
+.white {
+	background-color: #ffffff;
+}
+
 /* =Content
 ----------------------------------------------- */
 
@@ -665,14 +657,6 @@ a:active {
 .hentry { /* The wrapper for individual posts */
 	margin: 0 0 1.5em;
 	padding-bottom: 1.5em;
-}
-
-.sticky {
-
-}
-
-.bypostauthor {
-	
 }
 
 .page-header {
@@ -693,6 +677,14 @@ a:active {
 .single .byline,
 .group-blog .byline { /* Bylines are displayed on single posts and/or when there are multiple authors */
 	display: inline;
+}
+
+.sticky {
+
+}
+
+.bypostauthor {
+	
 }
 
 .edit-link { /* Link to Edit the post (only shows up for admins)
@@ -941,13 +933,11 @@ p.nocomments { /* Message displayed when there are no comments */
 /* =Widgets
 ----------------------------------------------- */
 
-/* About Box Widget */
+/* End of Posts Widget */
 
 .aboutbox img {
 	margin-bottom: 20px;
 }
-
-/* End of Posts Widget */
 
 .endofpost {
 	background-color: #f2f2f2;
@@ -1042,6 +1032,10 @@ p.nocomments { /* Message displayed when there are no comments */
 /* =Site Footer
 ----------------------------------------------- */
 
+footer {
+	width: 100%;
+}
+
 .social-icons .fa {
 	color: #FFFFFF;
 	font-size: 4em;
@@ -1057,7 +1051,7 @@ p.nocomments { /* Message displayed when there are no comments */
 	text-align: center;
 	color: #FFFFFF;
 	background-color: #b3b3b3;
-	padding: 1em;
+	padding: 10px;
 }
 
 #copyright a {
@@ -1185,7 +1179,7 @@ solves floating problems, by forcing the section to self clear its children (aka
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
 	.col {  
-		margin: 1% 0 1% 0%; 
+		margin: 1% 0% 1% 0%; 
 	}
     
     .span_1_of_12, 
@@ -1214,7 +1208,7 @@ solves floating problems, by forcing the section to self clear its children (aka
 
 @media only screen and (max-width: 480px) {
 	.col {  
-		margin: 1% 0 1% 0%; 
+		margin: 1% 0% 1% 0%; 
 	}
     
     .span_1_of_12, 

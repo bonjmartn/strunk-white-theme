@@ -16,20 +16,17 @@
 <body <?php body_class(); ?>>
 
 <div class="full-container">
-      <!-- Header Items -->
 
   <div class="main-header group">
 
       <div class="page-container">
 
-        <div class="logo">
-
-          <a href="<?php echo esc_url( home_url() ); ?>">
-          <?php if( get_theme_mod( 'sawfree_logo' ) != "" ): ?>
-            <img src="<?php echo get_theme_mod( 'sawfree_logo' ); ?>">
+        <div class="logo">          
+          <?php if( get_theme_mod( 'saw_logo' ) != "" ): ?>
+            <a href="<?php echo esc_url( home_url() ); ?>">
+              <img src="<?php echo get_theme_mod( 'saw_logo' ); ?>">
+            </a>
           <?php endif; ?>
-          </a>
-
         </div>
 
           <div class="main-navigation" role="navigation">

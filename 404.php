@@ -13,12 +13,12 @@
 				<section class="error-404 not-found">
 
 					<header class="page-header">
-						<h1 class="page-title"><?php _e( 'Hmm. That page doesn&rsquo;t exist.', 'strunk-and-white-free' ); ?></h1>
+						<h1 class="page-title"><?php _e( 'Hmm. That page doesn&rsquo;t exist.', 'strunk-and-white' ); ?></h1>
 					</header>
 
 					<div class="page-content">
 
-						<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'strunk-and-white-free' ); ?></p>
+						<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'strunk-and-white' ); ?></p>
 
 						<?php get_search_form(); ?>
 
@@ -36,9 +36,9 @@
 
 		</div>
 
-		</div>
-
 	</div>
+
+</div>
 
 </div>
 

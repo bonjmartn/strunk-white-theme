@@ -5,7 +5,7 @@
   <div class="page-container">
 
   <div class="section group">
-
+    
     <div class="content">
 
     <div class="col span_8_of_12">
@@ -34,14 +34,14 @@
 
       <?php
         $defaults = array(
-          'before'           => '<p>' . __( 'Pages:', 'strunk-and-white-free' ),
+          'before'           => '<p>' . __( 'Pages:', 'strunk-and-white' ),
           'after'            => '</p>',
           'link_before'      => '',
           'link_after'       => '',
           'next_or_number'   => 'number',
           'separator'        => ' ',
-          'nextpagelink'     => __( 'Next page', 'strunk-and-white-free' ),
-          'previouspagelink' => __( 'Previous page', 'strunk-and-white-free' ),
+          'nextpagelink'     => __( 'Next page', 'strunk-and-white' ),
+          'previouspagelink' => __( 'Previous page', 'strunk-and-white' ),
           'pagelink'         => '%',
           'echo'             => 1
         );
@@ -58,16 +58,23 @@
 
       <hr>
 
+      <?php if ( ! dynamic_sidebar( 'end-post') ): ?>
+              <h3>End of Posts Widget Setup</h3>
+              <p>This is a widget area that appears at the end of every blog post. Use it for an author box, newsletter subscription, or anything else. Go to Appearance > Widgets
+                and drag any widget to the "End of Posts" widget area.</p>
+      <?php endif; ?>
+      <hr>
+
       <?php comments_template(); ?>
       <?php paginate_comments_links() ?>
 
       <?php endwhile; else: ?>
 
-        <div class="page-header">
-            <h1 class="page-title"><?php _e( 'Oh no!', 'strunk-and-white-free' ); ?></h1>
-        </div>
+      <div class="page-header">
+      <h1>Oh no!</h1>
+      </div>
 
-        <p><?php _e( 'No content is appearing for this page!', 'strunk-and-white-free' ); ?></p>
+      <p>No content is appearing for this page!</p>
 
       <?php endif; ?>
 
@@ -78,8 +85,6 @@
     </div>
 
   </div>
-
-</div>
 
 </div>
 

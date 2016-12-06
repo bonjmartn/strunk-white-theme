@@ -37,10 +37,10 @@
                     <?php endwhile; else: ?>
 
                     <div class="page-header">
-                        <h1 class="page-title"><?php _e( 'Oh no!', 'strunk-and-white-free' ); ?></h1>
+                        <h1 class="page-title"><?php _e( 'Oh no!', 'strunk-and-white' ); ?></h1>
                     </div>
 
-                    <p><?php _e( 'No content is appearing for this page!', 'strunk-and-white-free' ); ?></p>
+                    <p><?php _e( 'No content is appearing for this page!', 'strunk-and-white' ); ?></p>
 
                     <?php endif; ?>
 
@@ -60,7 +60,6 @@
                     <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>></div>
 
                 </div>
-
 
             <div class="col span_4_of_12">
 

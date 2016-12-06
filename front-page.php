@@ -2,7 +2,7 @@
 
   
 <div class="background-photo">
-  <!-- background photo -->
+ 
 </div>  
 
 <div class="full-container">
@@ -21,7 +21,7 @@
 
 <!-- show latest blog posts -->
 
-<div class="full-container white">
+<div class="full-container">
 
   <div class="page-container">
 
@@ -39,9 +39,7 @@
 
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
-            <p class="home-byline">Posted on <?php echo the_time('l, F jS, Y');?> in 
-              <?php the_category( ', ' ); ?> with 
-              <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></p> 
+            <p class="home-byline">Posted on <?php echo the_time('l, F jS, Y');?> in <?php the_category( ', ' ); ?> with <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></p> 
 
             <p><?php the_excerpt(); ?></p>
 
@@ -65,5 +63,43 @@
   </div>
 
 </div>
+
+<div class="full-container gray">
+
+  <div class="page-container gray">
+
+      <div class="section group">
+
+          <div class="col span_6_of_12">
+
+            <div class="home-widgets">
+
+              <?php if ( ! dynamic_sidebar( 'home-left') ): ?>
+                <h3>Content Area Setup</h3>
+                <p>Set up this content area widget. Go to Appearance > Widgets.</p>
+              <?php endif; ?>
+
+            </div>
+
+          </div>
+
+          <div class="col span_6_of_12">
+
+            <div class="home-widgets">
+
+              <?php if ( ! dynamic_sidebar( 'home-right') ): ?>
+              <h3>Content Area Setup</h3>
+              <p>Set up this content area widget. Go to Appearance > Widgets.</p>
+              <?php endif; ?>
+
+            </div>
+
+          </div>
+      
+      </div>
+
+  </div><!-- end of page container -->
+
+</div><!-- end of full container -->
 
 <?php get_footer(); ?>

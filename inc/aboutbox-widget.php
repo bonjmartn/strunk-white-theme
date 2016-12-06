@@ -18,8 +18,8 @@ class aboutbox_widget extends WP_Widget {
   function __construct() {
     parent::__construct(
       'aboutbox_widget', // Base ID
-      __( 'About Box', 'strunk-and-white-free' ), // Name
-      array( 'description' => __( 'About Box for the Sidebar', 'strunk-and-white-free' ), ) // Args
+      __( 'About Box', 'strunk-and-white' ), // Name
+      array( 'description' => __( 'About Box for the Sidebar', 'strunk-and-white' ), ) // Args
     );
   }
 
@@ -64,33 +64,33 @@ class aboutbox_widget extends WP_Widget {
    * @param array $instance Previously saved values from database.
    */
   public function form( $instance ) {
-    $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'Title', 'strunk-and-white-free' );
-    $text = ! empty( $instance['text'] ) ? $instance['text'] : __( 'Text', 'strunk-and-white-free' );
-    $link = ! empty( $instance['link'] ) ? $instance['link'] : __( 'Image Link', 'strunk-and-white-free' );
-    $imgurl = ! empty( $instance['imgurl'] ) ? $instance['imgurl'] : __( 'Image URL from Media Library', 'strunk-and-white-free' );
+    $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'Title', 'strunk-and-white' );
+    $text = ! empty( $instance['text'] ) ? $instance['text'] : __( 'Text', 'strunk-and-white' );
+    $link = ! empty( $instance['link'] ) ? $instance['link'] : __( 'Image Link', 'strunk-and-white' );
+    $imgurl = ! empty( $instance['imgurl'] ) ? $instance['imgurl'] : __( 'Image URL from Media Library', 'strunk-and-white' );
     ?>
 
 
     <p>
-    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'strunk-and-white-free' ); ?></label> 
+    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'strunk-and-white' ); ?></label> 
     <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" 
     value="<?php echo esc_attr( $title ); ?>">
     </p>
 
     <p>
-    <label for="<?php echo $this->get_field_id('img_field'); ?>"><?php _e('Paste the URL of an image from your media library', 'strunk-and-white-free'); ?></label>
+    <label for="<?php echo $this->get_field_id('img_field'); ?>"><?php _e('Paste the URL of an image from your media library', 'strunk-and-white'); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id('img_field'); ?>" name="<?php echo $this->get_field_name('img_field'); ?>" type="text" 
     value="<?php echo esc_attr( $imgurl ); ?>" />
     </p>
 
     <p>
-    <label for="<?php echo $this->get_field_id('link_field'); ?>"><?php _e('Enter the URL of the page you want the image to link to', 'strunk-and-white-free'); ?></label>
+    <label for="<?php echo $this->get_field_id('link_field'); ?>"><?php _e('Enter the URL of the page you want the image to link to', 'strunk-and-white'); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id('link_field'); ?>" name="<?php echo $this->get_field_name('link_field'); ?>" type="text" 
     value="<?php echo esc_attr( $link ); ?>" />
     </p>
 
     <p>
-    <label for="<?php echo $this->get_field_id('text_field'); ?>"><?php _e('Enter any text that you want to appear', 'strunk-and-white-free'); ?></label>
+    <label for="<?php echo $this->get_field_id('text_field'); ?>"><?php _e('Enter any text that you want to appear', 'strunk-and-white'); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id('text_field'); ?>" name="<?php echo $this->get_field_name('text_field'); ?>" type="text" 
     value="<?php echo esc_attr( $text ); ?>" />
     </p>
