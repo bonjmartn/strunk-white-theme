@@ -47,7 +47,7 @@
 
           <div class="col span_6_of_12 home-blog-image">
 
-            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
+            <p class="home-feat-img"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a></p>
 
           </div>
 

@@ -4,7 +4,7 @@ Theme URI: https://www.zenwebthemes.com/shop-themes/strunk-white/
 Author: Bonnie Martin
 Author URI: https://www.zenwebthemes.com
 Description: Strunk & White is named after the authors of The Elements of Style, William Strunk Jr. and E. B. White.
-Version: 1.5
+Version: 1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns, left-sidebar, right-sidebar, full-width-template, custom-background, custom-colors, custom-header, custom-menu, featured-images, footer-widgets, theme-options, blog
@@ -382,14 +382,12 @@ textarea {
 
 a,
 a:visited {
-	color: #29abe2;
 	text-decoration: none;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #333333;
 	text-decoration: underline;
 }
 
@@ -728,6 +726,13 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
+.feat-img img {
+	max-width: 600px;
+}
+
+.home-feat-img img {
+	width: 370px;
+}
 
 /* =Aside Post Format
 ----------------------------------------------- */
@@ -1038,7 +1043,7 @@ footer {
 
 .social-icons .fa {
 	color: #FFFFFF;
-	font-size: 4em;
+	font-size: 3.5em;
 	padding: .2em;
 }
 
@@ -1046,12 +1051,12 @@ footer {
 	color: #FFFFFF;
 }
 
-.social-icons,
-.footer-strip {
+.social-icons {
 	text-align: center;
 	color: #FFFFFF;
 	background-color: #b3b3b3;
-	padding: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 #copyright a {
@@ -1060,6 +1065,11 @@ footer {
 
 .footer-strip {
 	font-size: .9em;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #b3b3b3;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 

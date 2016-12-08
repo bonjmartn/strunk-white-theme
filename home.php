@@ -25,7 +25,7 @@
                         <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
                         </em></p>            
 
-                        <p><?php if ( has_post_thumbnail() ) : ?>
+                        <p class="feat-img"><?php if ( has_post_thumbnail() ) : ?>
                         <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a></p>
 
                     <?php endif; ?>

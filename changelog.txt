@@ -33,3 +33,9 @@ Version 1.5
 ---------------------------------------
 
 - Security update for URLs the user enters for social media profiles and similar fields.
+
+Version 1.6
+12/7/16
+---------------------------------------
+
+- WordPress version 4.7 exposed a few flaws. Make improvements to how featured images are shown on the homepage and archives pages. Made improvements to the behavior of the accent color choice. Updated demo images and screenshots.

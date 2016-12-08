@@ -485,24 +485,27 @@ h4 a,
 h5,
 h5 a,
 h6,
-h6 a {
+h6 a,
+h1 a:visited,
+h2 a:visited,
+h3 a:visited,
+h4 a:visited,
+h5 a:visited,
+h6 a:visited {
   font-family: <?php echo get_theme_mod('saw_h_font_type'); ?>;
   color: <?php echo get_theme_mod('saw_h_color'); ?>;
 }
 
+a,
+a:visited {
+  color: <?php echo get_theme_mod('saw_accent_color'); ?>;
+}
 
 p,
 li {
 	font-size: <?php echo get_theme_mod('saw_p_font_size') . 'px'; ?>;
 	color: <?php echo get_theme_mod('saw_p_color'); ?>;
 	font-family: <?php echo get_theme_mod('saw_p_font_type'); ?>;
-}
-
-button,
-input[type=submit] {
-	color: <?php echo get_theme_mod('saw_button_color'); ?>;
-	background-color: <?php echo get_theme_mod('saw_buttonBG_color'); ?>;
-	font-size: <?php echo get_theme_mod('saw_button_font_size') . 'px'; ?>;
 }
 
 .main-navigation li:hover > a,
@@ -525,20 +528,15 @@ input[type=submit] {
   color: <?php echo get_theme_mod('saw_p_color'); ?>;
 }
 
-a,
-a:visited,
-:not(.main-navigation a),
-:not(.main-navigation a:visited), {
-	color: <?php echo get_theme_mod('saw_accent_color'); ?>;
-}
-
 .fa:hover {
   color: <?php echo get_theme_mod('saw_accent_color'); ?>;
 }
 
 button,
 input[type=submit] {
+  color: <?php echo get_theme_mod('saw_button_color'); ?>;
   background-color: <?php echo get_theme_mod('saw_accent_color'); ?>;
+  font-size: <?php echo get_theme_mod('saw_button_font_size') . 'px'; ?>;
 }
 
 
